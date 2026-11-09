@@ -1,0 +1,14 @@
+{
+  "name": "Frigo Chef",
+  "short_name": "Frigo Chef",
+  "description": "Votre frigo, vos envies, la meilleure recette.",
+  "lang": "fr",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#EDF2F8",
+  "theme_color": "#143F75",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

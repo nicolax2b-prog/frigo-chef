@@ -1,0 +1,23 @@
+# Frigo Chef — configuration Cloudflare Workers
+name = "frigo-chef"
+main = "src/worker.js"
+compatibility_date = "2025-09-01"
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+[[durable_objects.bindings]]
+name = "FOYER"
+class_name = "Foyer"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["Foyer"]
+
+[vars]
+# Nombre maximum de demandes à l'IA par foyer et par jour
+DAILY_AI_LIMIT = "60"
+# Pour changer de modèles Gemini plus tard, décommentez et adaptez :
+# MODELS_COMPLEX = "gemini-3.8-flash,gemini-3.5-flash-lite"
+# MODELS_DEFAULT = "gemini-3.5-flash-lite,gemini-3.1-flash-lite"
